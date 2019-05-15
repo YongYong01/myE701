@@ -29,6 +29,16 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 
 **Vorgehen**, z.B. Studieren Background Linux Namespaces vs. Container, UnionFS vs. Container Layer, Unix Prozesse (Jobs) vs. Docker run/start/stop
 
+### Kapitel: 702.1 Container Usage (Status: In Arbeit)
+
+**Weight**: 7 (7)
+
+**Beschreibung** Gegenüberstellung welche Linux Technologien für Container verwendet werden.
+
+**Tagesziele**, z.B. Erstellung einer Tabelle Linux - Container. 
+
+**Vorgehen**, z.B. Studieren Background Linux Namespaces vs. Container, UnionFS vs. Container Layer, Unix Prozesse (Jobs) vs. Docker run/start/stop
+
 **Beispiele und Arbeitsergebnisse**
 
 | Linux          | Container      | Beschreibung      |
