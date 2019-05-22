@@ -19,15 +19,32 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 ## Dokumention des Lern- und Entwicklungsprozesses
 ***
 
-### Kapitel: 702.1 Container Usage (Status: In Arbeit)
+### Kapitel: 701.1 Modern Software Development (Status: In Arbeit)
 
-**Weight**: 7 (7)
+**Weight**: 6 (4)
 
-**Beschreibung** Gegenüberstellung welche Linux Technologien für Container verwendet werden.
+**Beschreibung** Aufweisung, wie man eine Containerumgebung einrichtet. Die Begriffe Security, Performenz, Erreichbarkeit, Loadbalancing etc. werden nach diesem Topic bekannt sein.
 
-**Tagesziele**, z.B. Erstellung einer Tabelle Linux - Container. 
+**Tagesziele**, Ich will verstehen, wie man selber einen Container einrichtet und eigene Mikroprozesse installiert.
+Docker
 
-**Vorgehen**, z.B. Studieren Background Linux Namespaces vs. Container, UnionFS vs. Container Layer, Unix Prozesse (Jobs) vs. Docker run/start/stop
+**Vorgehen**, In den Unterlagen war ein Video vorhanden, dass ausführlich erklärt hat, wie ein Mikroprozess funktioniert
+
+**Beispiele und Arbeitsergebnisse**
+
+| Linux          | Container      | Beschreibung      |
+| -------------- | -------------- | ----------------- |
+| Namespaces     | laufender Container | beim Starten des Containers wird in eine andere Linux Namespace gewechselt |
+| UnionFS        | Image Layer         | Container Verwenden UnionFileSysteme um .... |
+| Unix Prozesse  | run/start/stop      | docker run/start/stop Befehle ähneln dem .... Subsystem |
+
+**Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
+
+## Links
+
+* [Exam 701: DevOps Tools Engineer](https://www.lpi.org/our-certifications/exam-701-objectives) 
+* [E701 Dokumentation](https://github.com/w901-fr19-mi/E701)
+* [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
 
 ### Kapitel: 702.1 Container Usage (Status: In Arbeit)
 
