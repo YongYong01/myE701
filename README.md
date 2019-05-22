@@ -71,10 +71,8 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 | Commands | Bedeutung |
 | -------------- | -------------- |
 | git branch | Mit diesem Befehl listet man alle Branches im eigenem Repo auf. Ebenfalls ist es möglich eigene Branches zu erstellen oder zu dem genannten Branch zu wechseln |
-| git commit | Damit ruft man eine Bestätigung für einen  |
-
-
-
+| git checkout | Mit diesem Befehl wechselt man einen Branch |
+| git commit | Damit ruft man eine Bestätigung für eine gespeicherte Aktion aus |
 
 
 | Linux          | Container      | Beschreibung      |
@@ -87,8 +85,8 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 
 ## Links
 
-* [Exam 701: DevOps Tools Engineer](https://www.lpi.org/our-certifications/exam-701-objectives) 
-* [E701 Dokumentation](https://github.com/w901-fr19-mi/E701)
+* [Git scm Basic Branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) 
+* [Git Buch](https://git-scm.com/book/de/v2)
 * [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
 
 
