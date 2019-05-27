@@ -12,7 +12,7 @@
 | 19.06.19 | 702.2 Container Deployment and Orchestration | 5 |
 | 26.06.19 | LB1 Theoretische Prüfung und Abschluss LB2 | - |
 | 03.07.19 | Sommersporttage | - |
-|          | Total Punkte | 27 (34) !
+|          | Total Punkte | 27 (34) ! |
 
 Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens 14 Punkte selbständig erarbeitet worden. 
 
@@ -25,8 +25,7 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 
 **Beschreibung** Aufweisung, wie man eine Containerumgebung einrichtet. Die Begriffe Security, Performenz, Erreichbarkeit, Loadbalancing etc. werden nach diesem Topic bekannt sein.
 
-**Tagesziele**, Ich will verstehen, wie man selber einen Container einrichtet und eigene Mikroprozesse installiert.
-Docker
+**Tagesziele**, Mit einem eigenem erstellten Container werde ich verstehen, wie die funktionalität einer Containerumgebung funktioniert. Dafür werde ich zusätzlich einen Mikroprozess erstellen, welcher mir aufzeigt, wie einer funktioniert.
 
 **Vorgehen**, In den Unterlagen war ein Video vorhanden, dass ausführlich erklärt hat, wie ein Mikroprozess funktioniert
 
@@ -65,21 +64,18 @@ Hier zeige ich auf, wie git mit VisualStudioCode verwalte. Mit Markdown kann ich
 
 ![VisualStudioCodeMarkdown](/images/VisualStudioCodeGIT.png)
 
-Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
+*Branch* Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
 Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten und von dort aus ausserhalb der Produktiven Zone arbeiten. Da man getrennt ist, wird die "master" Umgebung nicht beinträchtig. 
 
+*Tag* 
+
+**Commands**
 | Commands | Bedeutung |
 | -------------- | -------------- |
 | git branch | Mit diesem Befehl listet man alle Branches im eigenem Repo auf. Ebenfalls ist es möglich eigene Branches zu erstellen oder zu dem genannten Branch zu wechseln |
 | git checkout | Mit diesem Befehl wechselt man einen Branch |
 | git commit | Damit ruft man eine Bestätigung für eine gespeicherte Aktion aus |
-
-
-| Linux          | Container      | Beschreibung      |
-| -------------- | -------------- | ----------------- |
-| Namespaces     | laufender Container | beim Starten des Containers wird in eine andere Linux Namespace gewechselt |
-| UnionFS        | Image Layer         | Container Verwenden UnionFileSysteme um .... |
-| Unix Prozesse  | run/start/stop      | docker run/start/stop Befehle ähneln dem .... Subsystem |
+| git clone | Mit diesem Befehl klont man lokal ein Repository aus einem Git |
 
 **Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
 
