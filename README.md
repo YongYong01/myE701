@@ -1,3 +1,11 @@
+## Inhaltsverzeichnis
+
+* 01 - [Kapitel 701.1 Modern Software Development](#701.1)
+* 02 - [Kapitel 701.3 Source Code Management](#701.3)
+* 03 - [Kapitel 701.4 Continuous Integration and Continuous Deliver](#701.4)
+* 04 - [K4](#k4-)
+* 05 - [K5](#k5-)
+
 ## Fahrplan
 ***
 
@@ -19,7 +27,7 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 ## Dokumention des Lern- und Entwicklungsprozesses
 ***
 
-### Kapitel: 701.1 Modern Software Development (Status: In Arbeit)
+### Kapitel: 701.1 Modern Software Development <a name="701.1">
 
 **Weight**: 6 (4)
 
@@ -46,7 +54,7 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 * [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
 
 ***
-### Kapitel: 701.3 Source Code Management
+### Kapitel: 701.3 Source Code Management <a name="701.3">
 
 **Weight**: 6 (4)
 **Beschreibung** Kandidaten sollten in der Lage sein, Git zur Verwaltung und Freigabe von Quellcode zu verwenden. Dazu gehören das Erstellen und Beitragen zu einem Repository sowie die Verwendung von Tags, Zweigen und Remote-Repositories. Darüber hinaus sollte der Kandidat in der Lage sein, Dateien zusammenzuführen und Konflikte zu lösen.
@@ -55,7 +63,6 @@ Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens
 * Git als Repository verstehen
 * Dateistruktur von Git verstehen
 * Verwaltung von branches, tags und forks verstehen
-
 
 **Vorgehen**, Ich versuche selber ein GIT Repo zu erstellen, welchen ich selber verwalten werde. Danach schaue ein informatives Video an, welches mir die Grundlagen von GIT näher beibringt.
 
@@ -67,7 +74,9 @@ Hier zeige ich auf, wie git mit VisualStudioCode verwalte. Mit Markdown kann ich
 *Branch* Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
 Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten und von dort aus ausserhalb der Produktiven Zone arbeiten. Da man getrennt ist, wird die "master" Umgebung nicht beinträchtig. 
 
-*Tag* 
+*Tags* Tags sind Referenzen für eine bestimmte Version einer GIT Datei
+
+*Forks* Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Version auf das eigene GIT
 
 **Commands**
 | Commands | Bedeutung |
@@ -77,7 +86,7 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 | git commit | Damit ruft man eine Bestätigung für eine gespeicherte Aktion aus |
 | git clone | Mit diesem Befehl klont man lokal ein Repository aus einem Git |
 
-**Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
+**Fazit und Aussicht**, Durch dieses Kapitel wurden mir die Grundlagen der Gitverwaltung beigebracht. Dabei habe ich viele verschiedene Perspektiven in der Gitumgebung gesehen. Forken, Tags, Branch sind mir neue gelernte Begriffe. Ich kann nun mit GIT zukünftig meine Dokumentationen schreiben und Versionsgezielt arbeiten.
 
 ## Links
 
@@ -86,9 +95,9 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 * [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
 
 
-### Kapitel: 702.1 Container Usage (Status: In Arbeit)
+### Kapitel: 701.4 Continuous Integration and Continuous Deliver <a name="701.4">
 
-**Weight**: 7 (7)
+**Weight**: 5 + 5 Bonuspunkte für Aussetzen eines eigenes Projektes (Microservice) und dessen CI/CD mittels Jenkins.
 
 **Beschreibung** Gegenüberstellung welche Linux Technologien für Container verwendet werden.
 
@@ -106,9 +115,54 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 
 **Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
 
-## Links
 
-* [Exam 701: DevOps Tools Engineer](https://www.lpi.org/our-certifications/exam-701-objectives) 
-* [E701 Dokumentation](https://github.com/w901-fr19-mi/E701)
-* [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
+### 702.1 Container Usage 
+
+**Weight**: 7 + (7 für Schüler die das Modul 300 noch nicht besucht haben)
+
+**Beschreibung**,  Die Kandidaten sollten in der Lage sein, Docker-Container zu erstellen, zu teilen und zu betreiben. 
+
+**Tagesziele**,  
+* Dockerfunktionen dokumentieren 
+* eigenes Dockerfile erstellen
+* Docker Container erstellen
+
+**Vorgehen**, 
+Ich erstelle ein eigenes Dockerfile. In diesem Dockerfile wird automatisch ein MySQL Container erstellt.
+
+**Beispiele und Arbeitsergebnisse**
+Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
+
+    FROM ubuntu:14.04
+
+    # root Password setzen
+    RUN echo 'mysql-server mysql-server/root_password password Server.22' | debconf-set-selections 
+    RUN echo 'mysql-server mysql-server/root_password_again password Server.22' | debconf-set-selections 
+
+    # Installation
+    RUN apt-get update && apt-get install -y mysql-server
+
+    # mysql config
+    RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+
+    EXPOSE 3306
+
+    VOLUME /var/lib/mysql
+
+    CMD ["mysqld"]
+
+*Docker Befehle*
+
+| Command | Bedeutung |
+| ---- | ---- |
+| docker build "Source" | Erstellt ein Docker image | 
+| docker images | Zeigt alle verfügbare Docker images |
+| docker rmi "image" | Löscht ein Docker image |
+| docker run "image" | startet ein Docker image |
+| docker exec -it "Container" \bin\bash | Exploriert einen Container |
+
+*Was ist Docker?*
+
+Mit Docker kann man vereinfacht Container bereitstellen und installieren.
+
 
