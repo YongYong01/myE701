@@ -99,19 +99,14 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 
 **Weight**: 5 + 5 Bonuspunkte für Aussetzen eines eigenes Projektes (Microservice) und dessen CI/CD mittels Jenkins.
 
-**Beschreibung** Gegenüberstellung welche Linux Technologien für Container verwendet werden.
+**Beschreibung** 
 
-**Tagesziele**, z.B. Erstellung einer Tabelle Linux - Container. 
+**Tagesziele**, 
 
-**Vorgehen**, z.B. Studieren Background Linux Namespaces vs. Container, UnionFS vs. Container Layer, Unix Prozesse (Jobs) vs. Docker run/start/stop
+**Vorgehen**, Jenkins Container erstellen
 
 **Beispiele und Arbeitsergebnisse**
 
-| Linux          | Container      | Beschreibung      |
-| -------------- | -------------- | ----------------- |
-| Namespaces     | laufender Container | beim Starten des Containers wird in eine andere Linux Namespace gewechselt |
-| UnionFS        | Image Layer         | Container Verwenden UnionFileSysteme um .... |
-| Unix Prozesse  | run/start/stop      | docker run/start/stop Befehle ähneln dem .... Subsystem |
 
 **Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
 
@@ -165,4 +160,31 @@ Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
 
 Mit Docker kann man vereinfacht Container bereitstellen und installieren.
 
+### 702.2 Container Deployment and Orchestration
+**Weight**: 5
 
+**Beschreibung**,  Die Kandidaten sollten in der Lage sein, Kubernetes einzurichten und Docker Compose einzusetzen
+
+**Tagesziele**,  
+* Kubernetes Umgebung einrichten
+* Weave einrichten
+* Docker Compose verstehen
+
+**Vorgehen**, 
+Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
+
+**Beispiele und Arbeitsergebnisse**
+git clone https://github.com/mc-b/lernkube
+cd lernkube
+git clone https://github.com/mc-b/iot.kafka
+cp templates/MISEGR.yaml config.yaml
+vagrant plugin install vagrant-disksize
+vagrant up
+source kubeenv
+kubectlapply -f misegr/ewolff/ms-kubernetes/
+
+### 703.1 Virtual Machine Deployment
+
+
+
+### 704.1 Ansible
