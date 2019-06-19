@@ -24,7 +24,7 @@
 | 03.07.19 | Sommersporttage | - |
 |          | Total Punkte | 27 (34) ! |
 
-Kapitel aus E701 wurden in der Gruppe mit .... erarbeitet. Davon sind mindestens 14 Punkte selbständig erarbeitet worden. 
+Die Kapitel wurden in der Gruppe mit Aris Kabashi erarbeitet. 
 
 ## Dokumention des Lern- und Entwicklungsprozesses
 ***
@@ -73,18 +73,22 @@ Hier zeige ich auf, wie git mit VisualStudioCode verwalte. Mit Markdown kann ich
 
 ![VisualStudioCodeMarkdown](/images/VisualStudioCodeGIT.png)
 
+
 **Branch** 
 
 Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
 Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten und von dort aus ausserhalb der Produktiven Zone arbeiten. Da man getrennt ist, wird die "master" Umgebung nicht beinträchtig. 
 
+
 **Tags** 
 
 Tags sind Referenzen für eine bestimmte Version einer GIT Datei
 
+
 **Forks** 
 
 Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Version auf das eigene GIT
+
 
 **Commands**
 | Commands | Bedeutung |
@@ -93,6 +97,7 @@ Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Versi
 | git checkout | Mit diesem Befehl wechselt man einen Branch |
 | git commit | Damit ruft man eine Bestätigung für eine gespeicherte Aktion aus |
 | git clone | Mit diesem Befehl klont man lokal ein Repository aus einem Git |
+
 
 **Fazit und Aussicht**, Durch dieses Kapitel wurden mir die Grundlagen der Gitverwaltung beigebracht. Dabei habe ich viele verschiedene Perspektiven in der Gitumgebung gesehen. Forken, Tags, Branch sind mir neue gelernte Begriffe. Ich kann nun mit GIT zukünftig meine Dokumentationen schreiben und Versionsgezielt arbeiten.
 
@@ -204,6 +209,7 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 **Vorgehen**, 
 Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
 
+<break>
 ### 704.1 Ansible <a name="704.1">
 
 **Weight**: 8
