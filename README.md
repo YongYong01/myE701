@@ -274,9 +274,7 @@ Zeigt Informationen zu Modulen an, die in Ansible-Bibliotheken installiert sind.
 
 In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann man viele IP-Adressen zu einer bestimmten Gruppe auflisten, damit beim Ausführen eines Befehls, die ganze Gruppe den Befehl ausführt. Man könnte dort auch die Benutzername und das Passwort des Remote-Servers angeben, wäre aber nicht so praktisch, weil es dafür eine bessere Lösung gibt. 
 
-![Ansible 3](images/ansible_3.png) 
-
-![Ansible 3](images/ansible_3.png)
+![Ansible 3](/images/ansible_3.png)
 
 **Group_vars**
 
