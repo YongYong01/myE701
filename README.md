@@ -3,8 +3,10 @@
 * 01 - [Kapitel 701.1 Modern Software Development](#701.1)
 * 02 - [Kapitel 701.3 Source Code Management](#701.3)
 * 03 - [Kapitel 701.4 Continuous Integration and Continuous Deliver](#701.4)
-* 04 - [K4](#k4-)
-* 05 - [K5](#k5-)
+* 04 - [Kapitel 702.1 Container Usage](#702.1)
+* 05 - [Kapitel 702.2 ](#702.2)
+* 06 - [Kapitel 703.1 ](#703.1)
+* 07 - [Kapitel 704.1 ](#704.1)
 
 ## Fahrplan
 ***
@@ -111,7 +113,7 @@ Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten u
 **Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
 
 
-### 702.1 Container Usage 
+### 702.1 Container Usage  <a name="702.1">
 
 **Weight**: 7 + (7 für Schüler die das Modul 300 noch nicht besucht haben)
 
@@ -160,7 +162,7 @@ Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
 
 Mit Docker kann man vereinfacht Container bereitstellen und installieren.
 
-### 702.2 Container Deployment and Orchestration
+### 702.2 Container Deployment and Orchestration <a name="702.2">
 **Weight**: 5
 
 **Beschreibung**,  Die Kandidaten sollten in der Lage sein, Kubernetes einzurichten und Docker Compose einzusetzen
@@ -183,15 +185,10 @@ vagrant up
 source kubeenv
 kubectlapply -f misegr/ewolff/ms-kubernetes/
 
-### 703.1 Virtual Machine Deployment
+### 703.1 Virtual Machine Deployment <a name="703.1">
+**Weight**: 4
 
-
-
-### 704.1 Ansible
-
-**Weight**: 5
-
-**Beschreibung**,  Die Kanidaten wissen nach diesem Thema, was Ansible ist und wie man es einsetzt.
+**Beschreibung**,  Die Kandidaten sollten in der Lage sein, Kubernetes einzurichten und Docker Compose einzusetzen
 
 **Tagesziele**,  
 * Kubernetes Umgebung einrichten
@@ -200,6 +197,25 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 
 **Vorgehen**, 
 Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
+
+
+### 704.1 Ansible <a name="704.1">
+
+**Weight**: 8
+
+**Beschreibung**,  Der Kandidat wissen nach diesem Thema, was Ansible ist und wie man es einsetzt.
+
+**Tagesziele**,  
+* Ansible-playbook verstehen
+* Ansible.cfg verstehen
+* Ansible Galaxy verstehen
+* Ansible-doc verstehen
+* Ansible einsetzen
+
+**Vorgehen**, 
+Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
+
+**Beispiele und Arbeitsergebnisse**
 
 **Ansible.cfg**
 
@@ -220,19 +236,26 @@ In diesem Fall wird eine Remote-Verbindung zum Hosts «windows» gemacht und dor
 
 Zum Ansible mit einem Playbook auszuführen, kann man beispielsweise folgenden Befehl verwenden. 
 
-ansible-playbook $PlaybookPath -i $HostPath
+    ´´´
+        ansible-playbook $PlaybookPath -i $HostPath
+    ´´´
 
 **Ansible-vault**
 
 Ansible-Vault ist ein Tool, dass es ermöglicht Files zu verschlüsseln. So stehen beispielweise Benutzername und Passwörter nicht im Klartext. 
-  
+
+![Ansible 1](images/ansible_1.png)  
+
 In diesem Beispiel wären der Benutzername und das Passwort vom Remote-Server klar ersichtlich.
  
+![Ansible 2](images/ansible_2.png) 
 
 Um ein File mit Ansible-Vault zu entschlüsseln kann man beispielsweise folgenden Befehl verwenden: 
-ansible-playbook $PlaybookPath -i $HostPath --ask-vault-pass
+*ansible-playbook $PlaybookPath -i $HostPath --ask-vault-pass*
 
 **Ansible-galaxy**
+
+
 
 **Ansible-doc**
 
@@ -241,7 +264,9 @@ Zeigt Informationen zu Modulen an, die in Ansible-Bibliotheken installiert sind.
 **Hosts**
 
 In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann man viele IP-Adressen zu einer bestimmten Gruppe auflisten, damit beim Ausführen eines Befehls, die ganze Gruppe den Befehl ausführt. Man könnte dort auch die Benutzername und das Passwort des Remote-Servers angeben, wäre aber nicht so praktisch, weil es dafür eine bessere Lösung gibt. 
- 
+
+![Ansible 3](images/ansible_3.png) 
+
 **Group_vars**
 
 Dieser Ordner muss man noch erstellen und normalerweise werde dort auch die Anmeldeinformationen der hosts in .yaml Files gespeichert. Allerdings ist es aber auch möglich einen anderen Namen für diesen Ordner zu definieren, das müsste aber dann wiederrum im ansible.cfg konfiguriert werden. Group_vars ist der Standardname.
@@ -249,3 +274,6 @@ Dieser Ordner muss man noch erstellen und normalerweise werde dort auch die Anme
 **Ansible für nicht-Linux-Systeme**
 
 Ansible kann man auch für Windows benutzen. Dafür wird das Protokoll winrm verwendet. Der ganze Aufbau ist auch sehr ähnlich, wie bei Linux-Systemen. Auf dem Windows-Server müssen nur wenige PowerShell Scripts und PowerShell-Befehle ausgeführt werden, damit die Ports 5985 für http und 5986 für HTTPS. WinRM ist ein SOAP(Simple Object Access Protocol) Netzwerkprotokoll. Die ganze Anleitung für die Konfiguration unter Windows findet man hier: https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
+
+**Arbeitsergebnisse**
+![Ansible Dokumente](ansible)
