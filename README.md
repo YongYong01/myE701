@@ -188,3 +188,64 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 
 
 ### 704.1 Ansible
+
+**Weight**: 5
+
+**Beschreibung**,  Die Kanidaten wissen nach diesem Thema, was Ansible ist und wie man es einsetzt.
+
+**Tagesziele**,  
+* Kubernetes Umgebung einrichten
+* Weave einrichten
+* Docker Compose verstehen
+
+**Vorgehen**, 
+Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
+
+**Ansible.cfg**
+
+Das ist das Konfigurationsfile von Ansible. Die standardmässig vorhandenen Konfigurationen sollten in der Regel reichen. Das File findet man unter /etc/ansible.
+Im File können auch Umgebungsvariablen erstellt werden, welche die grundsätzlichen Variablen überschreibt. 
+
+**Ansible-playbook**
+
+In Ansible-playbook können Regeln definiert werden oder auch was auf dem Remote System erledigt werden sollte. Das Ansible-playbook-File liegt im besten Fall in einem Directory, wo alle Playbooks gesichert sind. Das Playbook wird im Format .yml gespeichert und kann folgendermassen aussehen: 
+
+  - name: Run Powershell Scripts
+    hosts: windows
+    tasks:
+  - name: run a powershell script
+    win_command: powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Documents/simple_ps.ps1
+
+In diesem Fall wird eine Remote-Verbindung zum Hosts «windows» gemacht und dort wird das PowerShell-Script ausgeführt, welches sich im Pfad «C:/Users/Administrator/Documents/simple_ps.ps1» befindet. 
+
+Zum Ansible mit einem Playbook auszuführen, kann man beispielsweise folgenden Befehl verwenden. 
+
+ansible-playbook $PlaybookPath -i $HostPath
+
+**Ansible-vault**
+
+Ansible-Vault ist ein Tool, dass es ermöglicht Files zu verschlüsseln. So stehen beispielweise Benutzername und Passwörter nicht im Klartext. 
+  
+In diesem Beispiel wären der Benutzername und das Passwort vom Remote-Server klar ersichtlich.
+ 
+
+Um ein File mit Ansible-Vault zu entschlüsseln kann man beispielsweise folgenden Befehl verwenden: 
+ansible-playbook $PlaybookPath -i $HostPath --ask-vault-pass
+
+**Ansible-galaxy**
+
+**Ansible-doc**
+
+Zeigt Informationen zu Modulen an, die in Ansible-Bibliotheken installiert sind. Es zeigt eine kurze Auflistung von Plugins und deren Kurzbeschreibungen, liefert einen Ausdruck ihrer DOCUMENTATION-Strings und kann einen kurzen "Ausschnitt" erstellen, der in ein Playbook eingefügt werden kann.
+
+**Hosts**
+
+In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann man viele IP-Adressen zu einer bestimmten Gruppe auflisten, damit beim Ausführen eines Befehls, die ganze Gruppe den Befehl ausführt. Man könnte dort auch die Benutzername und das Passwort des Remote-Servers angeben, wäre aber nicht so praktisch, weil es dafür eine bessere Lösung gibt. 
+ 
+**Group_vars**
+
+Dieser Ordner muss man noch erstellen und normalerweise werde dort auch die Anmeldeinformationen der hosts in .yaml Files gespeichert. Allerdings ist es aber auch möglich einen anderen Namen für diesen Ordner zu definieren, das müsste aber dann wiederrum im ansible.cfg konfiguriert werden. Group_vars ist der Standardname.
+
+**Ansible für nicht-Linux-Systeme**
+
+Ansible kann man auch für Windows benutzen. Dafür wird das Protokoll winrm verwendet. Der ganze Aufbau ist auch sehr ähnlich, wie bei Linux-Systemen. Auf dem Windows-Server müssen nur wenige PowerShell Scripts und PowerShell-Befehle ausgeführt werden, damit die Ports 5985 für http und 5986 für HTTPS. WinRM ist ein SOAP(Simple Object Access Protocol) Netzwerkprotokoll. Die ganze Anleitung für die Konfiguration unter Windows findet man hier: https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
