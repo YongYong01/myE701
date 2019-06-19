@@ -212,6 +212,8 @@ Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
 
 ### 704.1 Ansible
 
+
+### 704.1 Ans
 **Weight**: 8
 
 **Beschreibung**,  Der Kandidat wissen nach diesem Thema, was Ansible ist und wie man es einsetzt.
