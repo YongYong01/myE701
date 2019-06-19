@@ -277,6 +277,7 @@ In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann
 ![Ansible 3](images/ansible_3.png) 
 
 ![Ansible 3](images/ansible_3.png)
+
 **Group_vars**
 
 Dieser Ordner muss man noch erstellen und normalerweise werde dort auch die Anmeldeinformationen der hosts in .yaml Files gespeichert. Allerdings ist es aber auch möglich einen anderen Namen für diesen Ordner zu definieren, das müsste aber dann wiederrum im ansible.cfg konfiguriert werden. Group_vars ist der Standardname.
