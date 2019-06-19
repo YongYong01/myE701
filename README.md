@@ -4,9 +4,9 @@
 * 02 - [Kapitel 701.3 Source Code Management](#701.3)
 * 03 - [Kapitel 701.4 Continuous Integration and Continuous Deliver](#701.4)
 * 04 - [Kapitel 702.1 Container Usage](#702.1)
-* 05 - [Kapitel 702.2 ](#702.2)
-* 06 - [Kapitel 703.1 ](#703.1)
-* 07 - [Kapitel 704.1 ](#704.1)
+* 05 - [Kapitel 702.2 Container Deployment and Orchestration](#702.2)
+* 06 - [Kapitel 703.1 Virtual Machine Deployment](#703.1)
+* 07 - [Kapitel 704.1 Ansible](#704.1)
 
 ## Fahrplan
 ***
@@ -276,6 +276,7 @@ In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann
 
 ![Ansible 3](images/ansible_3.png) 
 
+![Ansible 3](images/ansible_3.png)
 **Group_vars**
 
 Dieser Ordner muss man noch erstellen und normalerweise werde dort auch die Anmeldeinformationen der hosts in .yaml Files gespeichert. Allerdings ist es aber auch möglich einen anderen Namen für diesen Ordner zu definieren, das müsste aber dann wiederrum im ansible.cfg konfiguriert werden. Group_vars ist der Standardname.
