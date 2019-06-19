@@ -15,8 +15,8 @@
 | Datum | behandelte Unterrichtsinhalte: | Gewichtung |
 | -------- | ------ | -------- |
 | 15.05.19 | Installation SW, Einrichten Linux VM(s)<br>[701.1 Modern Software Development, 1. Teil](https://github.com/w901-fr19-mi/E701#7011-modern-software-development) | 6 |
-| 22.05.19 | [701.1 Modern Software Development, 2. Teil](https://github.com/w901-fr19-mi/E701#7011-modern-software-development) | 4 |
-| 29.05.19 | [701.3 Source Code Management](https://github.com/w901-fr19-mi/E701#7013-source-code-management) | 5 | 
+| 22.05.19 | 701.1 Modern Software Development | 4 |
+| 29.05.19 | 701.3 Source Code Management | 5 | 
 | 05.06.19 | 702.1 Container Usage, 1. Teil | 7 |
 | 12.06.19 | 702.1 Container Usage, 2. Teil | (7) |
 | 19.06.19 | 702.2 Container Deployment and Orchestration | 5 |
@@ -31,34 +31,46 @@ Die Kapitel wurden in der Gruppe mit Aris Kabashi erarbeitet.
 
 ### Kapitel: 701.1 Modern Software Development <a name="701.1">
 
-**Weight**: 6 (4)
+**Weight**: 6 + 4 Bonuspunkte für eigenen Mikroprozesse erstellen
 
 **Beschreibung** Aufweisung, wie man eine Containerumgebung einrichtet. Die Begriffe Security, Performenz, Erreichbarkeit, Loadbalancing etc. werden nach diesem Topic bekannt sein.
 
-**Tagesziele**, Mit einem eigenem erstellten Container werde ich verstehen, wie die funktionalität einer Containerumgebung funktioniert. Dafür werde ich zusätzlich einen Mikroprozess erstellen, welcher mir aufzeigt, wie einer funktioniert.
+**Tagesziele**, 
+* Verstehen, wie eine Containerumgebung funktioniert
+* Begrifflichkeiten verstehen (Security, Performenz, Erreichbarkeit, Loadbalancing etc.)
+* Mikroprozesse erstellen
 
-**Vorgehen**, In den Unterlagen war ein Video vorhanden, dass ausführlich erklärt hat, wie ein Mikroprozess funktioniert
+**Vorgehen**, In den Unterlagen war ein Video vorhanden, dass ausführlich erklärt hat, wie ein Mikroprozess funktioniert. Dazu haben wir in diesem Kapitel kurz beschrieben, was genau ein Mikroprozess ist und haben sogar einen eigenen geschrieben.
 
-**Beispiele und Arbeitsergebnisse**
+**Arbeitsergebnisse**
 
-| Linux          | Container      | Beschreibung      |
-| -------------- | -------------- | ----------------- |
-| Namespaces     | laufender Container | beim Starten des Containers wird in eine andere Linux Namespace gewechselt |
-| UnionFS        | Image Layer         | Container Verwenden UnionFileSysteme um .... |
-| Unix Prozesse  | run/start/stop      | docker run/start/stop Befehle ähneln dem .... Subsystem |
+**Was ist ein Mirkoprozess?**
 
-**Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
+Ein Mikroprozess ist ein einzelner Prozess eines grossen Konstruktes. Der Sinn von Mikroprozesse ist, dass man nicht alles in einer grossen Applikation abspeichert, sondern man spaltet jeden einzelnen Ablauf ab, damit man eine höhere Erreichbarkeit erzielen.
 
-## Links
+**Mikroprozess JavaScript**
+Voraussetzung: Node JS installiert
 
-* [Exam 701: DevOps Tools Engineer](https://www.lpi.org/our-certifications/exam-701-objectives) 
-* [E701 Dokumentation](https://github.com/w901-fr19-mi/E701)
-* [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
+    var http = require("http");
+    http.createServer(function (request, response) {
+        // Send the HTTP header 
+        // HTTP Status: 200 : OK
+        // Content Type: text/plain
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        
+        // Send the response body as "Hello World"
+        response.end('Hello World\n');
+    }).listen(8081);
+    
+    // Console will print the message
+    console.log('Server running at http://127.0.0.1:8081/');
 
-***
+ Danach läuft hello world über den Localhost auf Port 8081
+
+
 ### Kapitel: 701.3 Source Code Management <a name="701.3">
 
-**Weight**: 6 (4)
+**Weight**: 5
 **Beschreibung** Kandidaten sollten in der Lage sein, Git zur Verwaltung und Freigabe von Quellcode zu verwenden. Dazu gehören das Erstellen und Beitragen zu einem Repository sowie die Verwendung von Tags, Zweigen und Remote-Repositories. Darüber hinaus sollte der Kandidat in der Lage sein, Dateien zusammenzuführen und Konflikte zu lösen.
 
 **Tagesziele**, 
@@ -199,7 +211,7 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 ### 703.1 Virtual Machine Deployment <a name="703.1">
 **Weight**: 4
 
-**Beschreibung**,  Die Kandidaten wissen wie man ein eigenes Vagrantfile erstellt. Man 
+**Beschreibung**,  Die Kandidaten wissen wie man ein eigenes Vagrantfile erstellt. Zudem können sie damit eine eigene automatisierte Umgebung aufbauen
 
 **Tagesziele**,  
 * Vagrant
@@ -208,13 +220,13 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 * Vagrant verstehen
 
 **Vorgehen**, 
-Vagrantfile schreiben und eigene VMs erstellen.
+Vagrantfile schreiben und eigene VMs erstellen. 
 
 **Beispiele und Arbeitsergebnisse**
 
 Vagrant ist ein Tool zum Erstellen und Verwalten von Umgebungen virtueller Maschinen in einem einzigen Workflow.
 
-Vagrant bietet einfach zu konfigurierende Arbeitsumgebungen, die auf  einem einzigen Workflow gesteuert werden, um die Produktivität und Flexibilität eines wiederholendes Vorgehen zu automatisieren.
+Vagrant bietet einfach zu konfigurierende Arbeitsumgebungen, die auf einem einzigen Workflow gesteuert werden, um die Produktivität und Flexibilität eines wiederholendes Vorgehen zu automatisieren.
 
 Auf folgender Seite kann Vagrant installiert werden: https://www.vagrantup.com/downloads.html
 
