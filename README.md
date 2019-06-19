@@ -209,8 +209,8 @@ kubectlapply -f misegr/ewolff/ms-kubernetes/
 **Vorgehen**, 
 Lernumgebung starten und Kubernetes Umgebung anschauen. Weave installieren.
 
-<break>
-### 704.1 Ansible <a name="704.1">
+
+### 704.1 Ansible
 
 **Weight**: 8
 
