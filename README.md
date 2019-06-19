@@ -258,7 +258,9 @@ Um ein File mit Ansible-Vault zu entschlüsseln kann man beispielsweise folgende
 
 **Ansible-galaxy**
 
+Ansible Galaxy ist eine Communityseite, wo sich einzelne User auf der ganzen Welt ihre eigene Projekte präsentieren. Diese herunterladen und selber testen.
 
+![Ansible Galaxy Seite](https://galaxy.ansible.com/)
 
 **Ansible-doc**
 
