@@ -73,12 +73,18 @@ Hier zeige ich auf, wie git mit VisualStudioCode verwalte. Mit Markdown kann ich
 
 ![VisualStudioCodeMarkdown](/images/VisualStudioCodeGIT.png)
 
-*Branch* Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
+**Branch** 
+
+Ein Branch ist eine isolierte Entwicklungszone. Hier testet man einzelne Skripts oder Programme bevor sie in die Produktion kommen.
 Man kann Beispielsweise eine Entwicklungszone mit git branch "Name" einrichten und von dort aus ausserhalb der Produktiven Zone arbeiten. Da man getrennt ist, wird die "master" Umgebung nicht beinträchtig. 
 
-*Tags* Tags sind Referenzen für eine bestimmte Version einer GIT Datei
+**Tags** 
 
-*Forks* Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Version auf das eigene GIT
+Tags sind Referenzen für eine bestimmte Version einer GIT Datei
+
+**Forks** 
+
+Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Version auf das eigene GIT
 
 **Commands**
 | Commands | Bedeutung |
@@ -236,10 +242,8 @@ In diesem Fall wird eine Remote-Verbindung zum Hosts «windows» gemacht und dor
 
 Zum Ansible mit einem Playbook auszuführen, kann man beispielsweise folgenden Befehl verwenden. 
 
-    ´´´
-        ansible-playbook $PlaybookPath -i $HostPath
-    ´´´
-
+    ansible-playbook $PlaybookPath -i $HostPath
+    
 **Ansible-vault**
 
 Ansible-Vault ist ein Tool, dass es ermöglicht Files zu verschlüsseln. So stehen beispielweise Benutzername und Passwörter nicht im Klartext. 
