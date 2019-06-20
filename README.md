@@ -14,7 +14,7 @@
 
 | Datum | behandelte Unterrichtsinhalte: | Gewichtung |
 | -------- | ------ | -------- |
-| 15.05.19 | Installation SW, Einrichten Linux VM(s)<br>[701.1 Modern Software Development, 1. Teil](https://github.com/w901-fr19-mi/E701#7011-modern-software-development) | 6 |
+| 15.05.19 | Installation SW, Einrichten Linux VM(s)<br>[701.1 Modern Software Development, 1. Teil](https://github.com/w901-fr19-mi/E701#7011-modern-software-development) | 6 + 4|
 | 22.05.19 | 701.1 Modern Software Development | 4 |
 | 29.05.19 | 701.3 Source Code Management | 5 | 
 | 05.06.19 | 702.1 Container Usage, 1. Teil | 7 |
@@ -118,22 +118,6 @@ Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Versi
 * [Git scm Basic Branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) 
 * [Git Buch](https://git-scm.com/book/de/v2)
 * [myE701 Original Repository](https://github.com/w901-fr19-mi/myE701) 
-
-
-### Kapitel: 701.4 Continuous Integration and Continuous Deliver <a name="701.4">
-
-**Weight**: 5 + 5 Bonuspunkte für Aussetzen eines eigenes Projektes (Microservice) und dessen CI/CD mittels Jenkins.
-
-**Beschreibung** 
-
-**Tagesziele**, 
-
-**Vorgehen**, Jenkins Container erstellen
-
-**Beispiele und Arbeitsergebnisse**
-
-
-**Fazit und Aussicht**, z.B. Die Durcharbeitung von ... gab mir ein besseres Verständnis über die Funktionsweise von Containern.
 
 
 ### 702.1 Container Usage  <a name="702.1">
