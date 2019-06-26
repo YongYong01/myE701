@@ -2,11 +2,10 @@
 
 * 01 - [Kapitel 701.1 Modern Software Development](#701.1)
 * 02 - [Kapitel 701.3 Source Code Management](#701.3)
-* 03 - [Kapitel 701.4 Continuous Integration and Continuous Deliver](#701.4)
-* 04 - [Kapitel 702.1 Container Usage](#702.1)
-* 05 - [Kapitel 702.2 Container Deployment and Orchestration](#702.2)
-* 06 - [Kapitel 703.1 Virtual Machine Deployment](#703.1)
-* 07 - [Kapitel 704.1 Ansible](#704.1)
+* 03 - [Kapitel 702.1 Container Usage](#702.1)
+* 04 - [Kapitel 702.2 Container Deployment and Orchestration](#702.2)
+* 05 - [Kapitel 703.1 Virtual Machine Deployment](#703.1)
+* 06 - [Kapitel 704.1 Ansible](#704.1)
 
 ## Fahrplan
 ***
@@ -15,14 +14,14 @@
 | Datum | behandelte Unterrichtsinhalte: | Gewichtung |
 | -------- | ------ | -------- |
 | 15.05.19 | 701.1 Modern Software Development | 6 + 4|
-| 22.05.19 | 701.3 Source Code Management | 4 |
-| 29.05.19 | 701.4 Continuous Integration and Continuous Deliver | 5 | 
-| 05.06.19 | 702.1 Container Usage | 7 |
-| 12.06.19 | 702.2 Container Deployment and Orchestration | (7) |
-| 19.06.19 | 702.2 Container Deployment and Orchestration , 703.1 Virtual Machine Deployment, 704.1 Ansible | 5 |
+| 22.05.19 | 701.3 Source Code Management | 5 |
+| 29.05.19 | 702.1 Container Usage | 7 + 7 | 
+| 05.06.19 | 702.2 Container Deployment and Orchestration | 5 |
+| 12.06.19 | 703.1 Virtual Machine Deployment | 4 |
+| 19.06.19 | 704.1 Ansible | 8 |
 | 26.06.19 | LB1 Theoretische Prüfung und Abschluss LB2 | - |
 | 03.07.19 | Sommersporttage | - |
-|          | Total Punkte | 27 (34) ! |
+|          | Total Punkte | 46 ! |
 
 Die Kapitel wurden in der Gruppe mit Aris Kabashi erarbeitet. 
 
@@ -158,7 +157,7 @@ Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
 
     CMD ["mysqld"]
 
-*Docker Befehle*
+**Docker Befehle**
 
 | Command | Bedeutung |
 | ---- | ---- |
@@ -168,7 +167,7 @@ Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
 | docker run "image" | startet ein Docker image |
 | docker exec -it "Container" \bin\bash | Exploriert einen Container |
 
-*Was ist Docker?*
+**Was ist Docker?**
 
 Mit Docker kann man vereinfacht Container bereitstellen und installieren.
 ![DockerArchitecture](/images/DockerArchitecture.jpeg)
