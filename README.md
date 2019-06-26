@@ -171,6 +171,7 @@ Anhand dieses Dockerfiles habe ich einen MySQL Container erstellt:
 *Was ist Docker?*
 
 Mit Docker kann man vereinfacht Container bereitstellen und installieren.
+![DockerArchitecture](/images/DockerArchitecture.jpeg)
 
 ### 702.2 Container Deployment and Orchestration <a name="702.2">
 **Weight**: 5
