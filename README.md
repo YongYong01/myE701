@@ -14,12 +14,12 @@
 
 | Datum | behandelte Unterrichtsinhalte: | Gewichtung |
 | -------- | ------ | -------- |
-| 15.05.19 | Installation SW, Einrichten Linux VM(s)<br>[701.1 Modern Software Development, 1. Teil](https://github.com/w901-fr19-mi/E701#7011-modern-software-development) | 6 + 4|
-| 22.05.19 | 701.1 Modern Software Development | 4 |
-| 29.05.19 | 701.3 Source Code Management | 5 | 
-| 05.06.19 | 702.1 Container Usage, 1. Teil | 7 |
-| 12.06.19 | 702.1 Container Usage, 2. Teil | (7) |
-| 19.06.19 | 702.2 Container Deployment and Orchestration | 5 |
+| 15.05.19 | 701.1 Modern Software Development | 6 + 4|
+| 22.05.19 | 701.3 Source Code Management | 4 |
+| 29.05.19 | 701.4 Continuous Integration and Continuous Deliver | 5 | 
+| 05.06.19 | 702.1 Container Usage | 7 |
+| 12.06.19 | 702.2 Container Deployment and Orchestration | (7) |
+| 19.06.19 | 702.2 Container Deployment and Orchestration , 703.1 Virtual Machine Deployment, 704.1 Ansible | 5 |
 | 26.06.19 | LB1 Theoretische Prüfung und Abschluss LB2 | - |
 | 03.07.19 | Sommersporttage | - |
 |          | Total Punkte | 27 (34) ! |
@@ -30,6 +30,7 @@ Die Kapitel wurden in der Gruppe mit Aris Kabashi erarbeitet.
 ***
 
 ### Kapitel: 701.1 Modern Software Development <a name="701.1">
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 **Weight**: 6 + 4 Bonuspunkte für eigenen Mikroprozesse erstellen
 
@@ -69,6 +70,7 @@ Voraussetzung: Node JS installiert
 
 
 ### Kapitel: 701.3 Source Code Management <a name="701.3">
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 **Weight**: 5
 **Beschreibung** Kandidaten sollten in der Lage sein, Git zur Verwaltung und Freigabe von Quellcode zu verwenden. Dazu gehören das Erstellen und Beitragen zu einem Repository sowie die Verwendung von Tags, Zweigen und Remote-Repositories. Darüber hinaus sollte der Kandidat in der Lage sein, Dateien zusammenzuführen und Konflikte zu lösen.
@@ -121,6 +123,7 @@ Wenn man ein bestimmmtes GIT Repository forked, dann zieht man eine eigene Versi
 
 
 ### 702.1 Container Usage  <a name="702.1">
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 **Weight**: 7 + (7 für Schüler die das Modul 300 noch nicht besucht haben)
 
@@ -193,6 +196,8 @@ source kubeenv
 kubectlapply -f misegr/ewolff/ms-kubernetes/
 
 ### 703.1 Virtual Machine Deployment <a name="703.1">
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
 **Weight**: 4
 
 **Beschreibung**,  Die Kandidaten wissen wie man ein eigenes Vagrantfile erstellt. Zudem können sie damit eine eigene automatisierte Umgebung aufbauen
@@ -351,6 +356,8 @@ Man kann von der Seite https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sor
 ```
 
 ### 704.1 Ansible <a name="704.1">
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
 **Weight**: 8
 
 **Beschreibung**,  Der Kandidat wissen nach diesem Thema, was Ansible ist und wie man es einsetzt.
@@ -392,11 +399,12 @@ Zum Ansible mit einem Playbook auszuführen, kann man beispielsweise folgenden B
 
 Ansible-Vault ist ein Tool, dass es ermöglicht Files zu verschlüsseln. So stehen beispielweise Benutzername und Passwörter nicht im Klartext. 
 
-![Ansible 1](images/ansible_1.png)  
+![Ansible1](/images/Ansible_1.png)
 
 In diesem Beispiel wären der Benutzername und das Passwort vom Remote-Server klar ersichtlich.
- 
-![Ansible 2](images/ansible_2.png) 
+
+
+![Ansible2](/images/Ansible_2.png)
 
 Um ein File mit Ansible-Vault zu entschlüsseln kann man beispielsweise folgenden Befehl verwenden: 
 *ansible-playbook $PlaybookPath -i $HostPath --ask-vault-pass*
@@ -416,7 +424,7 @@ Zeigt Informationen zu Modulen an, die in Ansible-Bibliotheken installiert sind.
 
 In ansible gibt es im Verzeichnis /etc/ansible eine File namens hosts. Dort kann man viele IP-Adressen zu einer bestimmten Gruppe auflisten, damit beim Ausführen eines Befehls, die ganze Gruppe den Befehl ausführt. Man könnte dort auch die Benutzername und das Passwort des Remote-Servers angeben, wäre aber nicht so praktisch, weil es dafür eine bessere Lösung gibt. 
 
-![Ansible 3](/images/ansible_3.png)
+![Ansible3](/images/Ansible_3.png)
 
 **Group_vars**
 
